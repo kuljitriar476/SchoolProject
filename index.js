@@ -2,8 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const route = require("./src/routes/route");
 const app = express();
-const keysData = require("./config/keys");
-console.log("DBURL", keysData);
+const { DBURL } = require("./config/keys");
+// console.log("DBURL", DBURL);
 
 app.use(express.json());
 

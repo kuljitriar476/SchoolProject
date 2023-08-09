@@ -65,6 +65,8 @@ const loginTeacher = async function (req, res) {
     const token = jwt.sign(
       {
         tracherId: teacherData?._id,
+        // teacherId: teacherData?._id,
+
         name: teacherData.name,
         lastName: teacherData.lastName,
         email: teacherData.email,
