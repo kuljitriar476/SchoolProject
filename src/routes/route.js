@@ -24,20 +24,20 @@ router.post("/teacher", teacherController.createTeacher);
 router.get(
   "/teacher",
   middleware.authenticationMiddleware,
-  middleware.authenticationMiddleware2,
+  // middleware.authenticationMiddleware2,
   teacherController.getAllTeacher
 );
 router.put(
   "/teacher/:id",
   middleware.authenticationMiddleware,
-  middleware.authenticationMiddleware2,
+  middleware.authorizationMiddlewarwe,
   teacherController.updataTeacher
 );
 
 router.get(
   "/teacher/:id",
-  middleware.authenticationMiddleware,
-  middleware.authenticationMiddleware2,
+  // middleware.authenticationMiddleware,
+  // middleware.authenticationMiddleware2,
   teacherController.singleTeacher
 );
 router.delete("/teacher/:id", teacherController.deleteTeacher);
@@ -86,5 +86,15 @@ router.get("/employs", employsController.getAllEmploys);
 router.get("/employs/:id", employsController.singleEmploys);
 router.put("/employs/:id", employsController.updateEmploys);
 router.delete("/employs/:id", employsController.deleteEmploys);
+
+// CRUD facility
+
+const facilityController=require("../controller/facility");
+const facility=require("../model/facility");
+
+router.post("/facility",facilityController.createFacility);
+router.get("/facility",facilityController.getAllFacility);
+router.get("/facility/:id",facilityController.singleFacility);
+router.put("/facility/:id",facilityController.updateFacility);
 
 module.exports = router;
