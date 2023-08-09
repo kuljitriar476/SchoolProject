@@ -9,7 +9,7 @@ app.use(express.json());
 
 mongoose
   .connect(
-    DBURL,
+    'mongodb+srv://kuljitriar476:BJ6BVtr4kin1qpk5@cluster0.i6ej52l.mongodb.net/',
     // "mongodb+srv://kuljitriar476:gD2d8s9rqisLyFYN@cluster0.dlxxflm.mongodb.net/test",
     // "mongodb+srv://kuljitriar476:BJ6BVtr4kin1qpk5@cluster0.i6ej52l.mongodb.net/",
     {
